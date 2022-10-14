@@ -15,7 +15,7 @@ jobs:
       - name: Build an image from Dockerfile
         id: image_build
         run: |
-          docker build -t sampleimage --iidfile=image_id.out -f alpineimage .
+          docker build -t photon --iidfile=image_id.out -f photonimage .
           echo ::set-output name=image_id::$(cat image_id.out)
 
       - name: Run Uptycs vulnerability scanner
